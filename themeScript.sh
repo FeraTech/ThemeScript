@@ -9,6 +9,7 @@ while true; do
     echo "
 What do you want to install?
 1) GTK themes
+2) QT themes
 2) Icon themes
 3) Exit
     "
@@ -60,6 +61,21 @@ What do you want to install?
             esac
         break;;
         [2]* ) echo
+            echo "QT themes"
+            echo "Which GTK themes do you want to install?"
+            echo "1) Qogir"
+            read -p "" op
+            case $op in
+                [1]* ) echo
+                    echo "Qogir"
+                    echo "Downloading theme..."
+                    git clone https://github.com/vinceliuice/Qogir-kde
+                    cd Qogir-kde/
+                    ./install.sh
+                break;;
+            esac
+        break;;
+        [3]* ) echo
             echo "Icon themes"
             echo "Which icon themes do you want to install?"
             echo "1) Qogir"
