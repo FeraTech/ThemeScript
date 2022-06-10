@@ -64,6 +64,9 @@ What do you want to install?
             echo "QT themes"
             echo "Which GTK themes do you want to install?"
             echo "1) Qogir"
+            echo "2) Matcha"
+            echo "3) WhiteSur"
+            echo "4) Layan"
             read -p "" op
             case $op in
                 [1]* ) echo
@@ -73,6 +76,32 @@ What do you want to install?
                     cd Qogir-kde/
                     ./install.sh
                 break;;
+                [2]* ) echo
+                    echo "Matcha"
+                    echo "Downloading theme..."
+                    git clone https://github.com/vinceliuice/Matcha-kde
+                    cd Matcha-kde/
+                    ./install.sh
+                break;;
+                [3]* ) echo
+                    echo "WhiteSur"
+                    echo "Downloading theme..."
+                    git clone https://github.com/vinceliuice/WhiteSur-kde
+                    cd WhiteSur-kde/
+                    ./install.sh
+                break;;
+                [4]* ) echo
+                    echo "Layan"
+                    echo "Downloading theme..."
+                    git clone https://github.com/vinceliuice/Layan-kde
+                    cd Layan-kde/
+                    ./install.sh
+                break;;
+                [5]* ) echo
+                    echo "Bye :))"
+                    echo
+                break;;
+                * ) echo "Select a valid option.";;
             esac
         break;;
         [3]* ) echo
