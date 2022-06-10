@@ -10,8 +10,8 @@ while true; do
 What do you want to install?
 1) GTK themes
 2) QT themes
-2) Icon themes
-3) Exit
+3) Icon themes
+4) Exit
     "
     read -p "" op
     case $op in
@@ -67,6 +67,7 @@ What do you want to install?
             echo "2) Matcha"
             echo "3) WhiteSur"
             echo "4) Layan"
+			echo "5) Exit"
             read -p "" op
             case $op in
                 [1]* ) echo
@@ -149,7 +150,7 @@ What do you want to install?
                 * ) echo "Select a valid option.";;
             esac
         break;;
-        [3]* ) echo
+        [4]* ) echo
             echo "Bye :))"
             echo
         break;;
